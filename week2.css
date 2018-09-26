@@ -51,14 +51,14 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.trailer {
-    text-align: center;
-}
-
 table {
     margin: auto;
 }
 
 td {
     padding: 10px;
+}
+
+.headings {
+    font-size: 50px;
 }
