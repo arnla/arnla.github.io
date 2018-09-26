@@ -1,0 +1,29 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header {
+    height: 30%;
+    text-align: center;
+}
+
+.content {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.btn-week {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px;
+  }

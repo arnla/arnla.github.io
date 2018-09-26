@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BLINDSPOTTING - Trailer</title>
+        <link rel="stylesheet" type="text/css" href="week2.css">
+    </head>
+
+    <body>
+        <div class="header" id="myHeader">
+            <a href="index.html"><button class="menuButton">HOME</button></a>
+            <a href="week2.html"><button class="menuButton">ABOUT</button></a>
+            <a href="week2-trailer.html"><button class="menuButton" style="background: black; color: white;">TRAILER</button></a>
+            <a href="week2-trailer.html"><button class="menuButton">SOUNDTRACK</button></a>
+        </div>
+
+        <div class="content trailer">
+            <iframe width="1120" height="630" src="https://www.youtube.com/embed/-9-HBqVbtTo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+        </script>
+    </body>
+</html>

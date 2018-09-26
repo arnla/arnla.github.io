@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ART321 - Week 2</title>
+        <link rel="stylesheet" type="text/css" href="week2.css">
+    </head>
+
+    <body>
+        <div class="parallax"></div>
+
+        <div class="header" id="myHeader">
+            <a href="index.html"><button class="menuButton">HOME</button></a>
+            <a href="week2-trailer.html"><button class="menuButton" style="background-color: black; color: white;">ABOUT</button></a>
+            <a href="week2-trailer.html"><button class="menuButton">TRAILER</button></a>
+            <a href="week2-trailer.html"><button class="menuButton">SOUNDTRACK</button></a>
+        </div>
+
+        <div class="content">
+            <!-- <table>
+                <tr>
+                    <h1>Synopsis</h1>
+                    <br>
+                    Collin must make it through his final three days of probation for a chance at a new beginning in his Oakland, Calif., neighborhood. His bond with his volatile best friend soon gets tested when Collin sees a police officer shoot a suspect in the back during a chase through the streets. Things soon come to a head when the buddies attend a party at the upscale home of a young and wealthy tech entrepreneur.
+                </tr>
+            </table> -->
+
+            <!-- <table style="width: 80%;" border="1"> -->
+            <table style="width: 80%;">
+                <tr>
+                    <td style="width: 100%;" colspan="2">
+                        <h1>Synopsis</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 100%;" colspan="2">
+                        Collin must make it through his final three days of probation for a chance at a new beginning in his Oakland, Calif., neighborhood. His bond with his volatile best friend soon gets tested when Collin sees a police officer shoot a suspect in the back during a chase through the streets. Things soon come to a head when the buddies attend a party at the upscale home of a young and wealthy tech entrepreneur.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><br></td>
+                </tr>
+                <tr>
+                    <td style="width: 100%;" colspan="2">
+                        <h1>Writers</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 40%;">
+                        <h3>Rafael Casal</h3>
+                    </td>
+                    <td style="width: 40%;">
+                        <h3>Daveed Diggs</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 40%;">
+                        <img src="rafael_casal.jpg" height="200px" width="200px">
+                        <br>
+                        <a href="http://getrafael.com/">Website</a>
+                    </td>
+                    <td style="width: 40%;">
+                        <img src="daveed_diggs.jpg" height="200px" width="200px">
+                        <br>
+                        <a href="https://en.wikipedia.org/wiki/Daveed_Diggs">Wikipedia</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+        </script>
+    </body>
+</html>
