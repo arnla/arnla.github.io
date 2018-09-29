@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ART321 - Week 2</title>
+        <title>ART321 - Assignment 2</title>
         <link rel="stylesheet" type="text/css" href="week2.css">
+        <script type="text/javascript" src="js/script.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     </head>
 
     <body>
         <div class="parallax"></div>
 
         <div class="header" id="myHeader">
-            <a href="index.html"><button class="menuButton">HOME</button></a>
-            <a href="#about"><button class="menuButton">ABOUT</button></a>
-            <a href="#trailer"><button class="menuButton">TRAILER</button></a>
-            <a href="#soundtrack"><button class="menuButton">SOUNDTRACK</button></a>
+            <a href="index.html"><button class="menuButton" id="homeBtn">HOME</button></a>
+            <a href="#about"><button class="menuButton" id="aboutBtn">ABOUT</button></a>
+            <a href="#trailer"><button class="menuButton" id="trailerBtn">TRAILER</button></a>
+            <a href="#soundtrack"><button class="menuButton" id="soundtrackBtn">SOUNDTRACK</button></a>
         </div>
 
         <div style="text-align:center;">
@@ -83,6 +85,25 @@
                 }
             }
 
+            $(document).ready(function () {
+                $("#aboutBtn").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#about").offset().top
+                    }, 2000);
+                });
+
+                $("#trailerBtn").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#trailer").offset().top
+                    }, 2000);
+                });
+
+                $("#soundtrackBtn").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#soundtrack").offset().top
+                    }, 2000);
+                });
+            });
 
         </script>
     </body>
