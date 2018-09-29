@@ -4,7 +4,7 @@ body {
 }
 
 .parallax {
-    background-image: url('blindspotting_poster.jpg');
+    background-image: url('blindspotting.jpg');
     min-height: 750px;
     background-attachment: fixed;
     /* background-position: center; */
