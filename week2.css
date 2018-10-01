@@ -5,13 +5,12 @@ body {
 
 .parallax {
     background-image: url('blindspotting.jpg');
-    /* min-height: 800px; */
-    /* height: 562px; */
-    height: 87vh;
+    height: 85vh;
+    width: 100vw;
     background-attachment: fixed;
-    /* background-position: center; */
+    background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
   
 .top-container {
