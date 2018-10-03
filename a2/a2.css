@@ -1,0 +1,28 @@
+head, body {
+    width: 100%;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+div {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+table {
+    margin: auto;
+    width: 50%;
+}
+
+td {
+    text-align: center;
+    width: 33%;
+}
+
+.imgClass {
+    width: 20%;
+}
