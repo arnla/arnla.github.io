@@ -1,0 +1,57 @@
+
+body{
+    margin:0;height:100%;
+}
+
+canvas{
+    position:absolute;top:0;left:0;
+    z-index: -1;
+    background-image: linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
+    background-image: -o-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
+    background-image: -moz-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
+    background-image: -webkit-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
+    background-image: -ms-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
+    
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgb(105,173,212)),
+        color-stop(0.84, rgb(23,82,145))
+    );
+}
+
+.main{
+    text-align: center;
+    height: 80vh;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.left{
+    left: 0;
+    height: 100%;
+    width: 10%;
+    position: fixed;
+    padding-left: 50px;
+}
+
+.right{
+    right: 0;
+    height: 80vh;
+    width: 85%;
+    position: fixed;
+}
+
+.ornament{
+    max-height: 50px;
+    user-select: none;
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+}
+
+.dropDivClass{
+    position: fixed;
+    z-index: 9999;
+}
