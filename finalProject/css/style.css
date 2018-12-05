@@ -38,6 +38,7 @@ canvas{
     max-height: 100vh;
     float: right;
     display: inline-block;
+    z-index: 1;
 }
 
 .draggable{
@@ -49,6 +50,8 @@ canvas{
     height: auto;
     max-height: 100%;
     padding-top: 5%;
+    position: fixed;
+    z-index: -1;
 }
 
 #trash{
