@@ -1,8 +1,0 @@
-Tree canvas:
-    https://www.kisspng.com/png-santa-claus-christmas-tree-drawing-clip-art-forest-553261/
-
-Snowing background:
-    https://codepen.io/loktar00/pen/CHpGo
-
-Drag and drop:
-    https://javascript.info/mouse-drag-and-drop
