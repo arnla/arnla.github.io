@@ -1,0 +1,15 @@
+head, body {
+    width: 100%;
+    text-align: center;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+div {
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 100px;
+    margin-right: 100px;
+}
