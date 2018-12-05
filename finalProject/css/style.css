@@ -41,7 +41,7 @@ canvas{
 }
 
 .draggable{
-    max-height: 7%;
+    height: 50px;
 }
 
 #tree{
@@ -55,12 +55,6 @@ canvas{
 }
 
 #trash{
-    /* display: inline-block;
-    width: 5vw;
-    height: 10vh;
-    float: right;
-    bottom: 0;
-    right: 0; */
     position: fixed;
     bottom: 0;
     right: 0;
@@ -73,4 +67,18 @@ canvas{
     top: 0;
     right: 0;
     height: 5vh;
+}
+
+#ornamentsTable{
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+tr{
+    height: 10%;
+}
+
+td{
+    width: 50%;
 }
