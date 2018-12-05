@@ -49,6 +49,7 @@ canvas{
     height: auto;
     max-height: 100%;
     padding-top: 5%;
+    padding-left: 15%;
     position: fixed;
     z-index: -1;
     bottom: 0;
