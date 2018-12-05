@@ -29,7 +29,7 @@ canvas{
     height: 100vh;
     display: inline-block;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 2%
 }
 
 .right{
@@ -42,7 +42,7 @@ canvas{
 }
 
 .draggable{
-    max-height: 50px;
+    max-height: 7%;
 }
 
 #tree{
@@ -56,10 +56,15 @@ canvas{
 }
 
 #trash{
-    display: inline-block;
+    /* display: inline-block;
     width: 5vw;
     height: 10vh;
     float: right;
     bottom: 0;
+    right: 0; */
+    position: fixed;
+    bottom: 0;
     right: 0;
+    width: 5vw;
+    height: 10vh;
 }
