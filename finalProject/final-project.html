@@ -27,15 +27,41 @@
 
     <div id="droppable" class="right">
       <img id="tree" style="display:inline-block" src="images/tree-canvas.gif">
+      <div id="sound">
+        <img id="muteToggle" src="images/mute.png" style="max-height: 100%;">
+      </div>
       <div id="trash">
         <img src="images/trash.jpg" style="max-height: 100%;">
       </div>
     </div>
 
-    <audio controls autoplay loop>
-      <source src="music.mp3" type="audio/mp3"> 
+    <audio id="myAudio" loop>
+      <source src="music.mp3" type="audio/mp3">
     </audio>
+
+    <!-- <iframe src="music.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>  -->
 
     <script src="js/index.js"></script>
   </body>
 </html>
+
+<script>
+  document.addEventListener("mousemove", audioStart);
+  
+  function audioStart(event) {
+    var audio = document.getElementById("myAudio");
+    audio.play();		
+  }
+
+  $("#muteToggle").click(function () {
+    var audio = document.getElementById("myAudio");
+    if (audio.paused) {
+      audio.play();
+      document.getElementById("muteToggle").src = "images/mute.png";
+    } else {
+      document.removeEventListener("mousemove", audioStart);
+      audio.pause();
+      document.getElementById("muteToggle").src = "images/unmute.png";
+    }
+  });
+</script>

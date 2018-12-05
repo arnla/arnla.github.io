@@ -68,3 +68,10 @@ canvas{
     width: 5vw;
     height: 10vh;
 }
+
+#sound{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 5vh;
+}
