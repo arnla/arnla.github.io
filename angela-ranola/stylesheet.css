@@ -1,0 +1,53 @@
+* {
+    font-family: Constantia;
+}
+
+.nav-container {
+    justify-content: right;
+}
+
+.nav-container a {
+    padding: 10px;
+    float: right;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-container #name {
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+}
+
+.container-title {
+    width: 48%;
+    float: left;
+    padding-right: 2%;
+    text-align: center;
+}
+
+.container-title #main-name {
+    font-size: 50px;
+}
+
+.container-title #about-me-content {
+    text-align: left;
+}
+
+.container-description {
+    width: 48%;
+    float: right;
+    padding-left: 2%;
+}
+
+.about-me-img {
+    height: 500px;
+}
