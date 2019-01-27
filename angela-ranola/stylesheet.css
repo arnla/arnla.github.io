@@ -27,6 +27,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 75%;
+    text-align: center;
 }
 
 .container-title {
@@ -52,4 +53,27 @@
 
 .about-me-img {
     height: 500px;
+}
+
+.contact-table {
+    width: 25%;
+    margin: auto;
+}
+
+.contact-table img {
+    width: 50px;
+}
+
+.contact-table .icon {
+    padding: 10px;
+    width: 20%;
+}
+
+.contact-table .contact-link a {
+    padding: 10px;
+    width: 80%;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    float: left;
 }
