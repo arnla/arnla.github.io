@@ -1,0 +1,114 @@
+* {
+    font-family: "Trebuchet MS";
+}
+
+nav {
+    background-color: black;
+    color: black;
+}
+
+.nav-container li {
+    float: right;
+    list-style-type: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.nav-container .logo {
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    text-align: center;
+}
+
+.container-title {
+    width: 48%;
+    float: left;
+    padding-right: 2%;
+    text-align: center;
+}
+
+#main-name {
+    font-size: 50px;
+}
+
+#about-me-content {
+    text-align: left;
+}
+
+.container-description {
+    width: 48%;
+    float: right;
+    padding-left: 2%;
+}
+
+.about-me-img {
+    height: 500px;
+}
+
+.contact-table {
+    width: 25%;
+    height: 100%;
+    margin: auto;
+}
+
+.contact-table img {
+    width: 50px;
+}
+
+.icon {
+    padding: 10px;
+    width: 20%;
+}
+
+.contact-link {
+    padding: 10px;
+    width: 80%;
+    height: 100%;
+    text-align: left;
+    float: left;
+    padding-top: 25px;
+}
+
+.container-projects {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-projects div {
+    width: 33%;
+    padding: 20px;
+    text-align: left;
+}
+
+.container-projects h3 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover, li:hover {
+    color: #d7a8ff;
+}
+
+video {
+    height: 500px;
+}
