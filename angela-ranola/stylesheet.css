@@ -47,16 +47,17 @@
     font-family: "Trebuchet MS";
 }
 
-nav {
-    background-color: black;
-    color: black;
+.nav-container {
+    background-color: #d7a8ff;
+    padding: 15px;
+    height: 70px;
 }
 
 .nav-container li {
     float: right;
     list-style-type: none;
-    padding: 10px;
-    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .nav-container .logo {
@@ -68,7 +69,7 @@ nav {
 
 .nav-container a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .container {
@@ -105,11 +106,11 @@ nav {
 
 #about-me-img {
     height: 500px;
-    animation: fadeIn ease 3s;
-    -webkit-animation: fadeIn ease 3s;
-    -moz-animation: fadeIn ease 3s;
-    -o-animation: fadeIn ease 3s;
-    -ms-animation: fadeIn ease 3s;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
 }
 
 .contact-table {
@@ -142,7 +143,7 @@ nav {
     flex-direction: row;
 }
 
-.container-projects div {
+.flex-item {
     width: 33%;
     padding: 20px;
     text-align: left;
@@ -157,8 +158,12 @@ a {
     color: black;
 }
 
-a:hover, li:hover {
-    color: #d7a8ff;
+li:hover {
+    border: solid white;
+}
+
+.container-projects div.flex-item-clickable:hover {
+    border: solid #d7a8ff;
 }
 
 video {
