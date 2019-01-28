@@ -149,6 +149,12 @@
     text-align: left;
 }
 
+.flex-item-clickable {
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .container-projects h3 {
     text-align: center;
 }
