@@ -1,3 +1,48 @@
+@keyframes fadeIn{
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
 * {
     font-family: "Trebuchet MS";
 }
@@ -39,11 +84,12 @@ nav {
     width: 48%;
     float: left;
     padding-right: 2%;
-    text-align: center;
+    text-align: left;
 }
 
 #main-name {
     font-size: 50px;
+    text-align: center;
 }
 
 #about-me-content {
@@ -54,10 +100,16 @@ nav {
     width: 48%;
     float: right;
     padding-left: 2%;
+    text-align: left;
 }
 
-.about-me-img {
+#about-me-img {
     height: 500px;
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
 }
 
 .contact-table {
