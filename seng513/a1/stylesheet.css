@@ -1,20 +1,24 @@
 * {
-    font-family: "Trebuchet MS";
+    font-family: "Segoe UI";
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+table {
+    margin: 0px auto;
+}
+
+h1 {
+    color: #298777;
 }
 
 .nav-container {
-    background-color: #d7a8ff;
+    background-color: #298777;
     padding: 15px;
     height: 50px;
-    vertical-align: top;
-}
-
-.nav-container li {
-    float: right;
-    list-style-type: none;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-weight: bold;
 }
 
 .nav-container .logo {
@@ -24,12 +28,48 @@
     padding-left: 10px;
 }
 
+.nav-container li {
+    float: right;
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+    border: solid white;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
 .nav-container a {
-    text-decoration: none;
     color: white;
 }
 
 .container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.container-left {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.container-right {
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.container-index {
+    height: auto;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -38,95 +78,36 @@
     text-align: center;
 }
 
-.container-title {
-    width: 48%;
-    float: left;
-    padding-right: 2%;
-    text-align: left;
+
+#index-title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #298777;
 }
 
-#main-name {
-    font-size: 50px;
-    text-align: center;
+#index-subtitle {
+    font-size: 30px;
+    font-weight: bold;
 }
 
-#about-me-content {
-    text-align: left;
+hr {
+    max-width: 700px;
 }
 
-.container-description {
-    width: 48%;
-    float: right;
-    padding-left: 2%;
+#about-me-description {
     text-align: left;
+    padding: 75px;
+    padding-left: 200px;
 }
 
 #about-me-img {
     height: 500px;
-}
-
-.contact-table {
-    width: 25%;
-    height: 100%;
-    margin: auto;
-}
-
-.contact-table img {
-    width: 50px;
-}
-
-.icon {
-    padding: 10px;
-    max-width: 50px;
-}
-
-.contact-link {
-    padding: 10px;
-    width: 80%;
-    height: 100%;
-    text-align: left;
-    float: left;
-    padding-top: 25px;
-}
-
-.container-projects {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-
-.flex-item {
-    width: 33%;
-    padding: 20px;
-    text-align: center;
-}
-
-.flex-item-clickable {
-    height: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.container-projects p {
-    text-align: left;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-li:hover {
-    border: solid white;
-}
-
-.container-projects div.flex-item-clickable:hover {
-    border: solid #d7a8ff;
+    padding-top: 75px;
 }
 
 .resume-section-title {
     font-weight: bold;
-    border-right: solid #d7a8ff;
+    border-right: solid #298777;
     font-size: 20px;
     padding: 15px;
     text-align: right;
@@ -139,17 +120,33 @@ li:hover {
     text-align: left;
 }
 
-#resume-download {
-    color: #d7a8ff;
-    text-decoration: underline;
+.icon {
+    max-width: 50px;
+    padding: 10px;
 }
 
-video {
-    height: 500px;
+.container-projects a {
+    height: 100%;
 }
 
-h1 {
-    text-decoration: underline;
-    color: #d7a8ff;
-    font-weight: bold;
+.project-item-clickable:hover {
+    background-color: #298777;
+}
+
+.project-item, .project-item-clickable {
+    width: 33%;
+    text-align: center;
+    border: solid 5px #298777;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.clickable {
+    height: 100%;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.table-contact td {
+    text-align: left;
 }
