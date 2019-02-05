@@ -133,7 +133,7 @@ hr {
 }
 
 .project-item, .project-item-clickable {
-    width: 33%;
+    width: 50%;
     text-align: center;
     border: solid 5px #298777;
     border-radius: 20px;
