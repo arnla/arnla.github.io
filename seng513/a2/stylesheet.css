@@ -1,10 +1,11 @@
 @media only screen and (min-width: 480px) {
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
     .box {
         margin-left: 50%;
         transform: translate(-50%, 0%);
+        background-color: #ff8585;
     }
 }
 
@@ -14,13 +15,32 @@ body {
     padding: 0;
 }
 
+textarea {
+    resize: none;
+    width: 80%;
+    height: 80%;
+    padding: 0;
+    background: #85e3ff;
+}
+
 .box {
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 .row {
-    flex-grow: 1;
-    border: solid black;
+    height: 15%;
+    max-height: 16.6%;
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    height: 100%;
+    width: 23%;
+    border-radius: 10px;
+    font-size: 400%;
+    background-color: #298777;
 }
