@@ -1,26 +1,22 @@
-@media only screen and (min-width: 480px) {
-}
+@media only screen and (min-width: 480px) {}
 
 @media only screen and (min-width: 992px) {
     .box {
+        width: 50vw;
         margin-left: 50%;
         transform: translate(-50%, 0%);
-        background-color: #ff8585;
     }
 }
 
-body {
+html {
     height: 100vh;
-    margin: 0;
-    padding: 0;
+    background-color: aqua;
 }
 
-textarea {
-    resize: none;
-    width: 80%;
-    height: 80%;
+body {
+    height: 98vh;
     padding: 0;
-    background: #85e3ff;
+    margin: 0;
 }
 
 .box {
@@ -28,6 +24,7 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    border: 1vh solid black;
 }
 
 .row {
