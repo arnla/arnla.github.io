@@ -1,26 +1,30 @@
 @media only screen and (min-width: 480px) {
+    #evaluateDiv {
+        font-size: 15vh;
+    }
 }
 
 @media only screen and (min-width: 992px) {
     .box {
+        width: 50vw;
         margin-left: 50%;
         transform: translate(-50%, 0%);
-        background-color: #ff8585;
+    }
+
+    #evaluateDiv {
+        font-size: 500%;
     }
 }
 
-body {
+html {
     height: 100vh;
-    margin: 0;
-    padding: 0;
+    background-color: aqua;
 }
 
-textarea {
-    resize: none;
-    width: 80%;
-    height: 80%;
+body {
+    height: 98vh;
     padding: 0;
-    background: #85e3ff;
+    margin: 0;
 }
 
 .box {
@@ -28,19 +32,36 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    border: 1vh solid black;
 }
 
 .row {
-    height: 15%;
+    flex-grow: 1;
     max-height: 16.6%;
     display: flex;
     justify-content: space-around;
 }
 
 button {
-    height: 100%;
-    width: 23%;
+    height: 95%;
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 24%;
     border-radius: 10px;
     font-size: 400%;
     background-color: #298777;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    text-align: right;
+    font-size: 100%;
+    white-space: nowrap;
+}
+
+#evaluateDiv {
+    background-color: #bae1ff;
+    max-height: 16.6%;
+    padding: 1%;
 }
