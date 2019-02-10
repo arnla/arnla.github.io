@@ -50,16 +50,24 @@ $(document).ready(function() {
                 $('#evaluateText').val(exp.substr(0, exp.length - 1));
                 break;
             case 'btnSubtract':
-                $('#evaluateText').val(exp + '-');
+                if (isOperatorValid(exp)) {
+                    $('#evaluateText').val(exp + '-');
+                }
                 break;
             case 'btnAdd':
-                $('#evaluateText').val(exp + '+');
+                if (isOperatorValid(exp)) {
+                    $('#evaluateText').val(exp + '+');
+                }
                 break;
             case 'btnMultiply':
-                $('#evaluateText').val(exp + '*');
+                if (isOperatorValid(exp)) {
+                    $('#evaluateText').val(exp + '*');
+                }
                 break;
             case 'btnDivide':
-                $('#evaluateText').val(exp + '/');
+                if (isOperatorValid(exp)) {
+                    $('#evaluateText').val(exp + '/');
+                }
                 break;
             case 'btnDecimal':
                 $('#evaluateText').val(exp + '.');
@@ -71,4 +79,12 @@ $(document).ready(function() {
         }
     });
     evalState = 'new';
+
+    function isOperatorValid(exp) {
+        let invalid = ['(','*','/','+','-'];
+        if (invalid.includes(exp[exp.length-1]) || exp === '') {
+            return false;
+        }
+        return true;
+    }
 });
