@@ -40,11 +40,13 @@ $(document).ready(function() {
             case 'btnLeftBracket':
                 if (isBracketValid('(',exp)) {
                     $('#evaluateText').val(exp + '(');
+                    openBrackets = true;
                 }
                 break
             case 'btnRightBracket':
                 if (isBracketValid(')',exp)) {
                     $('#evaluateText').val(exp + ')');
+                    openBrackets = false;
                 }
                 break;
             case 'btnClear':
@@ -87,8 +89,7 @@ $(document).ready(function() {
         }
     });
     evalState = 'new';
-    leftBracket = false;
-    rightBracket = false;
+    openBrackets = false;
 
     function isOperatorValid(exp) {
         let invalid = ['(','*','/','+','-'];
@@ -103,6 +104,9 @@ $(document).ready(function() {
         if (bracket === '(') {
             invalid = ['0','1','2','3','4','5','6','7','8','9','.'];
         } else {
+            if (openBrackets === false) {
+                return false;
+            }
             invalid = ['(','*','/','+','-'];
         }
         if (invalid.includes(exp[exp.length-1])) {
