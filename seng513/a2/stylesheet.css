@@ -18,7 +18,6 @@
 
 html {
     height: 100vh;
-    background-color: aqua;
 }
 
 body {
@@ -49,7 +48,14 @@ button {
     max-width: 24%;
     border-radius: 10px;
     font-size: 400%;
-    background-color: #298777;
+}
+
+.btnOperator {
+    background-color: darkgray;
+}
+
+.btnClear {
+    background-color: coral;
 }
 
 textarea {
@@ -61,7 +67,6 @@ textarea {
 }
 
 #evaluateDiv {
-    background-color: #bae1ff;
     max-height: 16.6%;
     padding: 1%;
 }
