@@ -28,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/seng513/a2/calculator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="84" column="54" selection-start-line="84" selection-start-column="54" selection-end-line="84" selection-end-column="54" />
+            <state relative-caret-position="440">
+              <caret line="82" column="52" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -229,11 +229,18 @@
       <option name="project" value="LOCAL" />
       <updated>1549782346042</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Operators checked for invalid input">
+      <created>1549783672958</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1549783672958</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14865000" />
+    <option name="totallyTimeSpent" value="15732000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1519" height="977" extended-state="6" />
@@ -270,7 +277,8 @@
     <MESSAGE value="Changed font size in evaluateDiv for mobile" />
     <MESSAGE value="All buttons responsive" />
     <MESSAGE value="Evaluation partly working. Need to add more logic to check for invalid input" />
-    <option name="LAST_COMMIT_MESSAGE" value="Evaluation partly working. Need to add more logic to check for invalid input" />
+    <MESSAGE value="Operators checked for invalid input" />
+    <option name="LAST_COMMIT_MESSAGE" value="Operators checked for invalid input" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/angela-ranola/resume.html">
@@ -355,8 +363,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seng513/a2/calculator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="84" column="54" selection-start-line="84" selection-start-column="54" selection-end-line="84" selection-end-column="54" />
+        <state relative-caret-position="440">
+          <caret line="82" column="52" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
         </state>
       </provider>
     </entry>
