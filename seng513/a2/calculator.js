@@ -1,6 +1,11 @@
 $(document).ready(function() {
     $('button').click(function() {
         let exp = $('#evaluateText').val();
+        if (evalState === 'evaluated') {
+            exp = '';
+            $('#evaluateText').val(exp);
+            evalState = 'new';
+        }
         switch (this.id) {
             case 'btn0':
                 $('#evaluateText').val(exp + '0');
@@ -61,7 +66,9 @@ $(document).ready(function() {
                 break;
             case 'btnEvaluate':
                 $('#evaluateText').val(eval(exp));
+                evalState = 'evaluated';
                 break;
         }
     });
+    evalState = 'new';
 });
