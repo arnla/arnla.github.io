@@ -1,10 +1,18 @@
-@media only screen and (min-width: 480px) {}
+@media only screen and (min-width: 480px) {
+    #evaluateDiv {
+        font-size: 16vh;
+    }
+}
 
 @media only screen and (min-width: 992px) {
     .box {
         width: 50vw;
         margin-left: 50%;
         transform: translate(-50%, 0%);
+    }
+
+    #evaluateDiv {
+        font-size: 500%;
     }
 }
 
@@ -39,12 +47,21 @@ button {
     flex-grow: 1;
     flex-basis: 0;
     max-width: 24%;
-    padding: 5px;
     border-radius: 10px;
     font-size: 400%;
     background-color: #298777;
 }
 
+textarea {
+    resize: none;
+    width: 100%;
+    text-align: right;
+    font-size: 100%;
+    white-space: nowrap;
+}
+
 #evaluateDiv {
-    line-height: 10%;
+    background-color: #bae1ff;
+    max-height: 16.6%;
+    padding: 1%;
 }
