@@ -28,16 +28,23 @@ body {
 }
 
 .row {
-    height: 15%;
+    flex-grow: 1;
     max-height: 16.6%;
     display: flex;
     justify-content: space-around;
 }
 
 button {
-    height: 100%;
-    width: 23%;
+    height: 95%;
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 24%;
+    padding: 5px;
     border-radius: 10px;
     font-size: 400%;
     background-color: #298777;
+}
+
+#evaluateDiv {
+    line-height: 10%;
 }
