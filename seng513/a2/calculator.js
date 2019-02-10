@@ -1,6 +1,11 @@
 $(document).ready(function() {
     $('button').click(function() {
         let exp = $('#evaluateText').val();
+        if (evalState === 'evaluated') {
+            exp = '';
+            $('#evaluateText').val(exp);
+            evalState = 'new';
+        }
         switch (this.id) {
             case 'btn0':
                 $('#evaluateText').val(exp + '0');
@@ -33,10 +38,16 @@ $(document).ready(function() {
                 $('#evaluateText').val(exp + '9');
                 break;
             case 'btnLeftBracket':
-                $('#evaluateText').val(exp + '(');
+                if (isBracketValid('(',exp)) {
+                    $('#evaluateText').val(exp + '(');
+                    openBrackets = true;
+                }
                 break
             case 'btnRightBracket':
-                $('#evaluateText').val(exp + ')');
+                if (isBracketValid(')',exp)) {
+                    $('#evaluateText').val(exp + ')');
+                    openBrackets = false;
+                }
                 break;
             case 'btnClear':
                 $('#evaluateText').val('');
@@ -45,23 +56,62 @@ $(document).ready(function() {
                 $('#evaluateText').val(exp.substr(0, exp.length - 1));
                 break;
             case 'btnSubtract':
-                $('#evaluateText').val(exp + '-');
+                if (isOperatorValid(exp)) {
+                    $('#evaluateText').val(exp + '-');
+                }
                 break;
             case 'btnAdd':
-                $('#evaluateText').val(exp + '+');
+                if (isOperatorValid(exp)) {
+                    $('#evaluateText').val(exp + '+');
+                }
                 break;
             case 'btnMultiply':
-                $('#evaluateText').val(exp + '*');
+                if (isOperatorValid(exp)) {
+                    $('#evaluateText').val(exp + '*');
+                }
                 break;
             case 'btnDivide':
-                $('#evaluateText').val(exp + '/');
+                if (isOperatorValid(exp)) {
+                    $('#evaluateText').val(exp + '/');
+                }
                 break;
             case 'btnDecimal':
                 $('#evaluateText').val(exp + '.');
                 break;
             case 'btnEvaluate':
-                $('#evaluateText').val(eval(exp));
+                try {
+                    $('#evaluateText').val(eval(exp));
+                } catch(e) {
+                    $('#evaluateText').val('ERROR');
+                }
+                evalState = 'evaluated';
                 break;
         }
     });
+    evalState = 'new';
+    openBrackets = false;
+
+    function isOperatorValid(exp) {
+        let invalid = ['(','*','/','+','-'];
+        if (invalid.includes(exp[exp.length-1]) || exp === '') {
+            return false;
+        }
+        return true;
+    }
+
+    function isBracketValid(bracket,exp) {
+        let invalid = [];
+        if (bracket === '(') {
+            invalid = ['0','1','2','3','4','5','6','7','8','9','.'];
+        } else {
+            if (openBrackets === false) {
+                return false;
+            }
+            invalid = ['(','*','/','+','-'];
+        }
+        if (invalid.includes(exp[exp.length-1])) {
+            return false;
+        }
+        return true;
+    }
 });
