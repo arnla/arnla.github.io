@@ -6,7 +6,7 @@
 
 @media only screen and (min-width: 992px) {
     .box {
-        width: 50vw;
+        width: 600px;
         margin-left: 50%;
         transform: translate(-50%, 0%);
     }
