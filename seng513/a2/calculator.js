@@ -1,117 +1,100 @@
 $(document).ready(function() {
+    setHeight();
+    changeFontSize();
+    let result = 0;
+    let evaluated = true;
+    let openBrackets = 0;
     $('button').click(function() {
-        let exp = $('#evaluateText').val();
-        if (evalState === 'evaluated') {
-            exp = '';
-            $('#evaluateText').val(exp);
-            evalState = 'new';
-        }
-        switch (this.id) {
-            case 'btn0':
-                $('#evaluateText').val(exp + '0');
-                break;
-            case 'btn1':
-                $('#evaluateText').val(exp + '1');
-                break;
-            case 'btn2':
-                $('#evaluateText').val(exp + '2');
-                break;
-            case 'btn3':
-                $('#evaluateText').val(exp + '3');
-                break;
-            case 'btn4':
-                $('#evaluateText').val(exp + '4');
-                break;
-            case 'btn5':
-                $('#evaluateText').val(exp + '5');
-                break;
-            case 'btn6':
-                $('#evaluateText').val(exp + '6');
-                break;
-            case 'btn7':
-                $('#evaluateText').val(exp + '7');
-                break;
-            case 'btn8':
-                $('#evaluateText').val(exp + '8');
-                break;
-            case 'btn9':
-                $('#evaluateText').val(exp + '9');
-                break;
-            case 'btnLeftBracket':
-                if (isBracketValid('(',exp)) {
-                    $('#evaluateText').val(exp + '(');
-                    openBrackets = true;
-                }
-                break
-            case 'btnRightBracket':
-                if (isBracketValid(')',exp)) {
-                    $('#evaluateText').val(exp + ')');
-                    openBrackets = false;
-                }
-                break;
-            case 'btnClear':
-                $('#evaluateText').val('');
-                break;
-            case 'btnDelete':
-                $('#evaluateText').val(exp.substr(0, exp.length - 1));
-                break;
-            case 'btnSubtract':
-                if (isOperatorValid(exp)) {
-                    $('#evaluateText').val(exp + '-');
-                }
-                break;
-            case 'btnAdd':
-                if (isOperatorValid(exp)) {
-                    $('#evaluateText').val(exp + '+');
-                }
-                break;
-            case 'btnMultiply':
-                if (isOperatorValid(exp)) {
-                    $('#evaluateText').val(exp + '*');
-                }
-                break;
-            case 'btnDivide':
-                if (isOperatorValid(exp)) {
-                    $('#evaluateText').val(exp + '/');
-                }
-                break;
-            case 'btnDecimal':
-                $('#evaluateText').val(exp + '.');
-                break;
-            case 'btnEvaluate':
-                try {
-                    $('#evaluateText').val(eval(exp));
-                } catch(e) {
-                    $('#evaluateText').val('ERROR');
-                }
-                evalState = 'evaluated';
-                break;
+        if (evaluated) {
+            switch (this.className) {
+                case 'btnClear':
+                    $('#expression').text('0');
+                    $('#result').text('Ans = ' + result);
+                    break;
+                case 'btnOperator':
+                    $('#expression').text($('#expression').text() + $(this).text());
+                    $('#result').text('Ans = ' + result);
+                    evaluated = false;
+                    break;
+                case 'btnNumber':
+                    $('#result').text('Ans = ' + result);
+                    $('#expression').text($(this).text());
+                    evaluated = false;
+                    break;
+                case 'btnBracket':
+                    if ($(this).is('#btnLeftBracket')) {
+                        openBrackets++;
+                    } else {
+                        if (openBrackets < 1) {
+                            break;
+                        } else {
+                            openBrackets--;
+                        }
+                    }
+                    $('#expression').text($(this).text());
+                    $('#result').text('Ans = ' + result);
+                    evaluated = false;
+                    break;
+                case 'btnEval':
+                    $('#result').text($('#expression').text() + ' =');
+                    $('#expression').text(eval($('#expression').text()));
+                    break;
+            }
+        } else {
+            switch (this.className) {
+                case 'btnClear':
+                    if ($(this).is('#btnClear')) {
+                        $('#expression').text('0');
+                        $('#result').text('Ans = ' + result);
+                        evaluated = true;
+                    } else {
+                        $('#expression').text($('#expression').text().substring(0, $('#expression').text().length - 1));
+                    }
+                    break;
+                case 'btnOperator':
+                    $('#expression').text($('#expression').text() + $(this).text());
+                    break;
+                case 'btnNumber':
+                    $('#expression').text($('#expression').text() + $(this).text());
+                    break;
+                case 'btnBracket':
+                    if ($(this).is('#btnLeftBracket')) {
+                        openBrackets++;
+                    } else {
+                        if (openBrackets < 1) {
+                            break;
+                        } else {
+                            openBrackets--;
+                        }
+                    }
+                    $('#expression').text($('#expression').text() + $(this).text());
+                    $('#result').text('Ans = ' + result);
+                    evaluated = false;
+                    break;
+                case 'btnEval':
+                    try {
+                        result = eval($('#expression').text());
+                    } catch {
+                        result = 'ERROR';
+                    }
+                    $('#result').text($('#expression').text() + ' =');
+                    $('#expression').text(result);
+                    evaluated = true;
+                    break;
+            }
         }
     });
-    evalState = 'new';
-    openBrackets = false;
-
-    function isOperatorValid(exp) {
-        let invalid = ['(','*','/','+','-'];
-        if (invalid.includes(exp[exp.length-1]) || exp === '') {
-            return false;
-        }
-        return true;
-    }
-
-    function isBracketValid(bracket,exp) {
-        let invalid = [];
-        if (bracket === '(') {
-            invalid = ['0','1','2','3','4','5','6','7','8','9','.'];
-        } else {
-            if (openBrackets === false) {
-                return false;
-            }
-            invalid = ['(','*','/','+','-'];
-        }
-        if (invalid.includes(exp[exp.length-1])) {
-            return false;
-        }
-        return true;
-    }
 });
+
+function changeFontSize() {
+    $('#expression').css('font-size', $('#expressionDiv').height() * 0.8);
+    $('#result').css('font-size', $('#resultDiv').height() * 0.8);
+    $('button').css('font-size', $('button').height() * 0.8);
+}
+
+function setHeight() {
+    let resultHeight = $('#resultDiv').height();
+    let expressionHeight = $('#expressionDiv').height();
+    $('#resultDiv').height(resultHeight);
+    $('#expressionDiv').height(expressionHeight);
+}
