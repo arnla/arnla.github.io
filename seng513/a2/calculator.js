@@ -1,3 +1,7 @@
+window.addEventListener('orientationchange', function () {
+    location.reload();
+});
+
 $(document).ready(function() {
     setHeight();
     changeFontSize();
