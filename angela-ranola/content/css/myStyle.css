@@ -1,0 +1,17 @@
+#mainTitle {
+    margin: 0;
+    padding: 0;
+}
+
+#horizontalLine {
+    border-color: white;
+}
+
+#mainDesc {
+    font-weight: bold;
+}
+
+.myIcons {
+    max-height: 40px;
+    margin: 10px;
+}
