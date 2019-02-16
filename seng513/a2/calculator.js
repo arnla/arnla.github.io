@@ -58,6 +58,9 @@ $(document).ready(function() {
                     $('#expression').text($('#expression').text() + $(this).text());
                     break;
                 case 'btnBracket':
+                    if (!isBracketValid(this.id)) {
+                        break;
+                    }
                     if ($(this).is('#btnLeftBracket')) {
                         openBrackets++;
                     } else {
@@ -85,6 +88,19 @@ $(document).ready(function() {
         }
     });
 });
+
+function isBracketValid(btn) {
+    let valid;
+    if (btn === 'btnLeftBracket') {
+        valid = ['+','-','*','/'];
+    } else {
+        valid = ['0','1','2','3','4','5','6','7','8','9'];
+    }
+    if (valid.includes($('#expression').text()[$('#expression').text().length - 1])) {
+        return true;
+    }
+    return false;
+}
 
 function changeFontSize() {
     $('#expression').css('font-size', $('#expressionDiv').height() * 0.8);
