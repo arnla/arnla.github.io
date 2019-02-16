@@ -92,9 +92,9 @@ $(document).ready(function() {
 function isBracketValid(btn) {
     let valid;
     if (btn === 'btnLeftBracket') {
-        valid = ['+','-','*','/'];
+        valid = ['+','-','*','/','('];
     } else {
-        valid = ['0','1','2','3','4','5','6','7','8','9'];
+        valid = ['0','1','2','3','4','5','6','7','8','9',')'];
     }
     if (valid.includes($('#expression').text()[$('#expression').text().length - 1])) {
         return true;
