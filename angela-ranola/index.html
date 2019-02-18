@@ -244,13 +244,13 @@
                     <div class="portfolio-wrap">
                         <figure>
                             <img src="resources/images/toolshare.jpg" class="img-fluid" alt="" style="height: 100%; width: 100%;">
-                            <a href="#projectModal" class="link-preview" data-toggle="modal" title="Preview">
+                            <a href="#projectModal" class="link-preview toolshareProj" data-toggle="modal" title="Preview" onclick="openProject(this)">
                                 <i class="ion ion-eye"></i>
                             </a>
                         </figure>
 
                         <div class="portfolio-info">
-                            <h4><a href="#">ToolShare</a></h4>
+                            <h4><a class="toolshareProj" href="#projectModal" data-toggle="modal" onclick="openProject(this)">ToolShare</a></h4>
                             <p>Android application</p>
                         </div>
                     </div>
@@ -260,13 +260,13 @@
                     <div class="portfolio-wrap">
                         <figure>
                             <img src="resources/images/CNRL-logo.jpg" class="img-fluid" alt="" style="height: 100%; width: 100%;">
-                            <a href="#projectModal" class="link-preview" data-toggle="modal" title="Preview">
+                            <a href="#projectModal" class="link-preview wardProj" data-toggle="modal" title="Preview" onclick="openProject(this)">
                                 <i class="ion ion-eye"></i>
                             </a>
                         </figure>
 
                         <div class="portfolio-info">
-                            <h4><a href="#">WARD</a></h4>
+                            <h4><a class="wardProj" href="#projectModal" data-toggle="modal" onclick="openProject(this)">WARD</a></h4>
                             <p>ASP.NET MVC web application</p>
                         </div>
                     </div>
@@ -276,13 +276,13 @@
                     <div class="portfolio-wrap">
                         <figure>
                             <img src="resources/images/web-based.png" class="img-fluid" alt="" style="height: 100%; width: 100%;">
-                            <a href="#projectModal" class="link-preview" data-toggle="modal" title="Preview">
+                            <a href="#projectModal" class="link-preview seng513Proj" data-toggle="modal" title="Preview" onclick="openProject(this)">
                                 <i class="ion ion-eye"></i>
                             </a>
                         </figure>
 
                         <div class="portfolio-info">
-                            <h4><a href="#">SENG513 - Web-based Systems</a></h4>
+                            <h4><a class="seng513Proj" href="#projectModal" data-toggle="modal" onclick="openProject(this)">SENG513 - Web-based Systems</a></h4>
                             <p>See assignments for this course (course in progress)</p>
                         </div>
                     </div>
@@ -301,11 +301,7 @@
                                         <span class="sr-only">Close</span>
                                     </button>
                                 </div>
-                                <div class="modal-body">...</div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
+                                <div id="projectModalContent" class="modal-body">...</div>
                             </div>
                         </div>
                     </div>
@@ -337,21 +333,21 @@
 
                 <div class="col-md-4">
                     <div class="contact-phone">
-                        <a href="https://www.linkedin.com/in/angela-ranola">
+                        <a href="https://www.linkedin.com/in/angela-ranola" target="_blank">
                             <img src="resources/images/linkedin-icon.png" width="50px;">
                         </a><br><br>
                         <h3>LinkedIn</h3>
-                        <p><a href="https://www.linkedin.com/in/angela-ranola">angela-ranola</a></p>
+                        <p><a href="https://www.linkedin.com/in/angela-ranola" target="_blank">angela-ranola</a></p>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="contact-address">
-                        <a href="https://github.com/arnla">
+                        <a href="https://github.com/arnla" target="_blank">
                             <img src="resources/images/github-icon.png" width="50px;">
                         </a><br><br>
                         <h3>Github</h3>
-                        <p><a href="https://github.com/arnla">arnla</a></p>
+                        <p><a href="https://github.com/arnla" target="_blank">arnla</a></p>
                     </div>
                 </div>
 
@@ -402,6 +398,7 @@
 
 <!-- Template Main Javascript File -->
 <script src="content/js/main.js"></script>
+<script src="content/js/myJs.js"></script>
 
 </body>
 </html>
