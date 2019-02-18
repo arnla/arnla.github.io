@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>BizPage Bootstrap Template</title>
+    <title>Angela Ranola</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -244,8 +244,9 @@
                     <div class="portfolio-wrap">
                         <figure>
                             <img src="resources/images/toolshare.jpg" class="img-fluid" alt="" style="height: 100%; width: 100%;">
-                            <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                            <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                            <a href="#projectModal" class="link-preview" data-toggle="modal" title="Preview">
+                                <i class="ion ion-eye"></i>
+                            </a>
                         </figure>
 
                         <div class="portfolio-info">
@@ -259,8 +260,9 @@
                     <div class="portfolio-wrap">
                         <figure>
                             <img src="resources/images/CNRL-logo.jpg" class="img-fluid" alt="" style="height: 100%; width: 100%;">
-                            <a href="img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
-                            <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                            <a href="#projectModal" class="link-preview" data-toggle="modal" title="Preview">
+                                <i class="ion ion-eye"></i>
+                            </a>
                         </figure>
 
                         <div class="portfolio-info">
@@ -274,8 +276,9 @@
                     <div class="portfolio-wrap">
                         <figure>
                             <img src="resources/images/web-based.png" class="img-fluid" alt="" style="height: 100%; width: 100%;">
-                            <a href="img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
-                            <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                            <a href="#projectModal" class="link-preview" data-toggle="modal" title="Preview">
+                                <i class="ion ion-eye"></i>
+                            </a>
                         </figure>
 
                         <div class="portfolio-info">
@@ -285,17 +288,25 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="portfolio-wrap">
-                        <figure>
-                            <img src="resources/images/netart.PNG" class="img-fluid" alt="" style="height: 100%; width: 100%;">
-                            <a href="img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
-                            <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                        </figure>
-
-                        <div class="portfolio-info">
-                            <h4><a href="#">ART321 - Net Art</a></h4>
-                            <p>See assignments for this course</p>
+                <!-- Modal -->
+                <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="vertical-alignment-helper">
+                        <div class="modal-dialog vertical-align-center">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="projectModalTitle">Modal title</h4>
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">...</div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
