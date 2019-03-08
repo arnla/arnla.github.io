@@ -11,7 +11,7 @@ function openProject(proj) {
             'gathering and coordination with the business analysts. As the lead developer, I worked on the back-end\n' +
             'and front-end. This included UI, database integration and migrations.\n' +
             '</p>' +
-            '<div style="text-align: center;"><iframe src="https://drive.google.com/file/d/1trTqT7zW2QghfOM4w_bvFxqxhdOahNca/preview" width="640" height="480"></iframe>' +
+            '<div style="text-align: center;"><iframe src="https://drive.google.com/file/d/1trTqT7zW2QghfOM4w_bvFxqxhdOahNca/preview" width="auto" height="auto"></iframe>' +
             '<br><a href="https://github.com/arnla/ToolShare2" target="_blank">' +
             '<img class="myIcons" src="resources/images/github-icon.png">' +
             'Source Code\n' +
